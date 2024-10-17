@@ -1,14 +1,14 @@
 import Navbar from "../components/Navbar/Navbar";
 import Slider from "../components/Slider/slider";
 import About from "../components/About/About";
-import AllProjects from "../components/All Projects/allProjects";
 import ContactUs from "../components/Contact Us/ContactUs";
 import Footer from "../components/Footer/Footer";
+import AllProjects from "../components/All Projects/allProjects";
 import { Box } from "@chakra-ui/react";
 
 function Home() {
   return (
-    <Box>
+    <Box bg="gray.900">
       {/* Navbar */}
       <Navbar />
 

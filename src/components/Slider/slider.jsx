@@ -5,12 +5,15 @@ import img2 from "../../assets/img2.webp";
 import img3 from "../../assets/img3.webp";
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick theme CSS
+import { useMediaQueryContext } from "../../context/MediaQueryContext";
 
 function ImageSlider() {
+  const { isMobile } = useMediaQueryContext(); // Use both mobile and tablet queries
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -27,7 +30,7 @@ function ImageSlider() {
             src={img1}
             alt="Property 1"
             width="100%"
-            height="600px"
+            height={isMobile ? "500px" : "600px"}
             objectFit="fill"
           />
         </Box>
@@ -36,7 +39,7 @@ function ImageSlider() {
             src={img2}
             alt="Property 2"
             width="100%"
-            height="600px"
+            height={isMobile ? "500px" : "600px"}
             objectFit="fill"
           />
         </Box>
@@ -45,7 +48,7 @@ function ImageSlider() {
             src={img3}
             alt="Property 3"
             width="100%"
-            height="600px"
+            height={isMobile ? "500px" : "600px"}
             objectFit="fill"
           />
         </Box>
