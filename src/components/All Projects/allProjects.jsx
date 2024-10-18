@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function AllProjects() {
   return (
-    <>
+    <Grid gap={20}>
       <Box bg="gray.900" p={8} color="white" minH="100vh">
         <Heading textAlign="center" mb={8} fontSize="3xl">
           Flat Projects
@@ -137,13 +137,13 @@ export default function AllProjects() {
               display="block"
               mx="auto"
               w={40}
-              align="center" 
+              align="center"
             >
               VIEW ALL
             </Button>
           </Box>
         </Grid>
       </Box>
-    </>
+    </Grid>
   );
 }
