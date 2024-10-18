@@ -7,7 +7,7 @@ const MediaQueryContext = createContext();
 
 export const MediaQueryProvider = ({ children }) => {
   // Define media query breakpoints
-  const [isMobile] = useMediaQuery("(max-width: 768px)"); // Mobile screen
+  const [isMobile] = useMediaQuery("(max-width: 767px)"); // Mobile screen
   const [isTablet] = useMediaQuery(
     "(min-width: 768px) and (max-width: 1024px)"
   ); // Tablet screen

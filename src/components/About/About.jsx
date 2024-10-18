@@ -3,7 +3,7 @@ import aboutUs from "../../assets/aboutus.webp"; // Replace with your actual ima
 import { useMediaQueryContext } from "../../context/MediaQueryContext";
 
 function About() {
-  const { isMobile } = useMediaQueryContext();
+  const { isMobile, isTablet } = useMediaQueryContext();
 
   return (
     <Box
@@ -49,7 +49,7 @@ function About() {
             alt="Nirmay Infratech"
             objectFit="fill"
             w="100%" // Full width
-            h={isMobile ? "50vh" : "100vh"} // Full height
+            h={isMobile ? "20rem" : isTablet ? "35rem" : "40rem"} // Mobile, Tablet, and Desktop heights
           />
         </Box>
       </Grid>
